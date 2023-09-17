@@ -87,7 +87,7 @@ class Amber(object):
 
 
 	# Returns the current percentage of renewables in the grid
-	def get_current_renewables(self, state: State, previous: int = None, next: int = None, resolution: int = None) -> list[dict]:
+	def get_current_renewables(self, state: State, previous: Optional[int] = None, next: Optional[int] = None, resolution: Optional[int] = None) -> list[dict]:
 		return self._make_request(
 			self._GET, "/state/{state}/renewables/current",
 			params={"state": state.value},

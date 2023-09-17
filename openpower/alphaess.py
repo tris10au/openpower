@@ -100,7 +100,7 @@ class AlphaESS(object):
 
 
 	# Obtain the SN of the charging pile according to the SN, and set the model
-	def get_ev_charger_settings(self, serial_number: Optional[str] = None) -> list[dict]:
+	def get_ev_charger_list(self, serial_number: Optional[str] = None) -> list[dict]:
 		return self._make_request(
 			self._GET, "/getEvChargerConfigList",
 			query=self._get_query_params(serial_number)
