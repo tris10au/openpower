@@ -1,13 +1,12 @@
 from setuptools import setup, find_packages
 
 
-with open("VERSION", "r") as version_file:
-	version = version_file.read().strip()
+VERSION = "0.1.1"
 
 with open("README.md", "r") as f:
 	setup(
 		name="openpower",
-		version=version,
+		version=VERSION,
 		author="tris10au",
 		description="Python library for monitoring and controlling solar power systems, including batteries and inverters",
 		long_description_content_type="text/markdown",
