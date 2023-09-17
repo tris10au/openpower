@@ -74,7 +74,8 @@ class AlphaESS(object):
 				"timeStamp": self._datetime_to_timestamp(timestamp),
 				"sign": self._sign_request(timestamp)
 			},
-			json=body
+			json=body,
+			timeout=self._API_TIMEOUT
 		)
 
 		r.raise_for_status()
